@@ -5,6 +5,7 @@ Docker and tomcat 8 in a few simple steps
 
 The process flow of getting a docker container up and running Tomcat 8 with a hello world application.
 
+![docker][docker.png]
 
 ## Prerequisites
 
