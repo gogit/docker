@@ -74,7 +74,7 @@ The process of getting a docker container up and running Tomcat 8 with a hello w
 	
 ### List the containers	
 	
-	To list the running containers do a "docker ps"	
+	To list the running containers
 	
 	```shell
    
