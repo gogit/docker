@@ -31,16 +31,20 @@ The process of getting a docker container up and running Tomcat 8 with a hello w
 
    On listing the contents of the directory "docker"
    
-   <code>
+   ```shell
+   
    root@ubuntu:~# ls docker
    Dockerfile  hello-world.war
-   </code>
+   
+   ```
 
    To build the image using the Dockerfile run the below command.
    
-   <code>
+   ```shell
+   
    docker build -t 'thinktag/tomcat' docker/
-   </code>
+   
+   ```
      
    
    
@@ -48,54 +52,58 @@ The process of getting a docker container up and running Tomcat 8 with a hello w
    
    Run the below command to list the images
    
-   <code>
+   ```shell
+   
    root@ubuntu:~# docker images
    REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
    thinktag            tomcat              ac8bcb99503a        22 minutes ago      779.8 MB
    ubuntu              14.04               b2f1fdd93175        3 days ago          188.4 MB
-   </code>
+   
+   ```
    
    
 ### Run a docker container from the image.
 
    To run a docker container using the created images
  
-   <code>
+   ```shell
+   
    docker run -d -p 8080:8080 -p 8009:8009 thinktag:tomcat
-   </code>
+   
+   ```
 	
 ### List the containers	
 	
 	To list the running containers do a "docker ps"	
 	
-	<code>
+	```shell
    
 	root@ubuntu:~# docker ps
 	CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                            NAMES
 	164e21a62c99        thinktag:tomcat     "/opt/tomcat/bin/cata"   25 minutes ago      Up 25 minutes       0.0.0.0:8009->8009/tcp, 0.0.0.0:8080->8080/tcp   gigantic_bhaskara
 	
-	</code>
+	```
 	
 ### Attach to the running docker container to inspect details
 
 	You can attach to a running container for debugging
 
-	<code>
+	```shell
    
     root@ubuntu:~# docker exec -it 164e21a62c99 /bin/bash
     root@164e21a62c99:/opt/tomcat#
     
-	</code>
+	```
    
 ### Shutdown the container
     
 	You can shutdown the container by shutting down tomcat.
 
-    <code>
+    ```shell
    
     root@ubuntu:~# docker exec -it 164e21a62c99 /bin/bash
     root@164e21a62c99:/opt/tomcat# bin/shutdown.sh
 	
-    </code>
+    ```
 
 	
