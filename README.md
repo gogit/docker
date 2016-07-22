@@ -3,7 +3,7 @@ Docker and tomcat 8 in a few simple steps
 
 ## Overview
 
-The process of getting a docker container up and running Tomcat 8 with a hello world application.
+The process flow of getting a docker container up and running Tomcat 8 with a hello world application.
 
 
 ## Prerequisites
@@ -39,14 +39,16 @@ The process of getting a docker container up and running Tomcat 8 with a hello w
    ```
 
    To build the image using the Dockerfile run the below command.
-   
+
+   Change the tag "thinktag/tomcat" to something else.   
+  
    ```shell
    
    docker build -t 'thinktag/tomcat' docker/
    
    ```
      
-   
+     
    
 ### Check the images
    
@@ -72,7 +74,7 @@ The process of getting a docker container up and running Tomcat 8 with a hello w
    
    ```
 	
-### List the containers	
+### List the containers.	
 	
 	To list the running containers
 	
@@ -106,4 +108,7 @@ The process of getting a docker container up and running Tomcat 8 with a hello w
 	
     ```
 
+## References
+   https://github.com/cmoro-deusto/docker-tomcat8/blob/master/Dockerfile
+   
 	
